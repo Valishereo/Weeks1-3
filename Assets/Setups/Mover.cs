@@ -17,7 +17,7 @@ public class Mover : MonoBehaviour
     void Update()
     {
         Vector3 moverXPos = transform.position;
-        moverXPos.x = moverXPos.x + speed;
+        moverXPos.x += speed * Time.deltaTime;
         transform.position = moverXPos;
 
         Vector3 screenTransformPosition = gameCamera.WorldToScreenPoint(transform.position);
